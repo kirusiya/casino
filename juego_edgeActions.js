@@ -29,7 +29,7 @@ Symbol.bindElementAction(compId,symbolName,"${_mozquito1}","click",function(sym,
 //Edge binding end
 Symbol.bindElementAction(compId,symbolName,"${_mozquito2}","click",function(sym,e){if(sym.getPosition()>8356){sym.$("soplido")[0].play();sym.getSymbol("mano_vaquero").play("fumar");sym.$("cigarro-humo-2").css({"opacity":1});sym.getSymbol("cigarro-humo-2").play();sym.$("boca-normal").css({"opacity":0});sym.$("boca-abajo").css({"opacity":1});setTimeout(function(){sym.$("boca-normal").css({"opacity":1});sym.$("boca-abajo").css({"opacity":0});},500);setTimeout(function(){sym.$("cigarro-humo-2").css({"opacity":0});sym.$("mozquito2").hide();sym.$("humo2").css({"opacity":1});sym.$("estallido")[0].play();},500);setTimeout(function(){sym.$("humo2").css({"opacity":0});},800);var vida=sym.getVariable("vida");sym.setVariable("vida",vida-1);var count=sym.getVariable("count");sym.setVariable("count",count+1);setTimeout(function(){sym.$("Text").html(""+count);},300);}});
 //Edge binding end
-Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",0,function(sym,e){sym.setVariable("count",1);sym.setVariable("vida",0);sym.$("cigarro-humo-1").css({"opacity":0});sym.$("cigarro-humo-2").css({"opacity":0});sym.$("cigarro-humo-3").css({"opacity":0});sym.$("cigarro-humo-4").css({"opacity":0});sym.$("boca-abajo").css({"opacity":0});});
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",0,function(sym,e){sym.setVariable("count",1);sym.setVariable("vida",0);sym.$("reglas").css({"z-index":99999});sym.$("cigarro-humo-1").css({"opacity":0});sym.$("cigarro-humo-2").css({"opacity":0});sym.$("cigarro-humo-3").css({"opacity":0});sym.$("cigarro-humo-4").css({"opacity":0});sym.$("boca-abajo").css({"opacity":0});});
 //Edge binding end
 Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",11500,function(sym,e){var vida=sym.getVariable("vida");sym.setVariable("vida",vida+1);var vida=sym.getVariable("vida");sym.$("mozquito2").css({"opacity":0});if(vida>=3){sym.play("game-over");}});
 //Edge binding end
@@ -43,7 +43,7 @@ Symbol.bindElementAction(compId,symbolName,"${_jugar-nuevo}","click",function(sy
 //Edge binding end
 Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",17096,function(sym,e){sym.stop();});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_como}","click",function(sym,e){sym.stop();sym.getSymbol("reglas").play("reglas-play");});
+Symbol.bindElementAction(compId,symbolName,"${_como}","click",function(sym,e){sym.stop();sym.getSymbol("reglas").play("reglas-play");sym.$("boca-normal").hide();});
 //Edge binding end
 Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",16000,function(sym,e){var count=sym.getVariable("count");sym.$("score-txt").html(count-1);});
 //Edge binding end
@@ -95,9 +95,9 @@ Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",597,function(sym,e
 //Edge binding end
 Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",1410,function(sym,e){sym.stop();});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_fondo-como}","click",function(sym,e){sym.play("reglas-out");sym.getComposition().getStage().getSymbol("juego").play();});
+Symbol.bindElementAction(compId,symbolName,"${_fondo-como}","click",function(sym,e){sym.play("reglas-out");sym.getComposition().getStage().getSymbol("juego").$("boca-normal").show();sym.getComposition().getStage().getSymbol("juego").play();});
 //Edge binding end
-Symbol.bindElementAction(compId,symbolName,"${_como-pergamino}","click",function(sym,e){sym.play("reglas-out");sym.getComposition().getStage().getSymbol("juego").play();});
+Symbol.bindElementAction(compId,symbolName,"${_como-pergamino}","click",function(sym,e){sym.play("reglas-out");sym.getComposition().getStage().getSymbol("juego").$("boca-normal").show();sym.getComposition().getStage().getSymbol("juego").play();});
 //Edge binding end
 })("reglas");
 //Edge symbol end:'reglas'
