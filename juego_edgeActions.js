@@ -101,4 +101,10 @@ Symbol.bindElementAction(compId,symbolName,"${_como-pergamino}","click",function
 //Edge binding end
 })("reglas");
 //Edge symbol end:'reglas'
+
+//=========================================================
+
+//Edge symbol: 'Precargador'
+(function(symbolName){})("Precargador");
+//Edge symbol end:'Precargador'
 })(jQuery,AdobeEdge,"casino");
