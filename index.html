@@ -15,24 +15,24 @@
 
 <script type="text/javascript" src=""></script>
 <script>
-    var audio = document.createElement("audio");
-audio.src = "sound/musicafondoloop.mp3";
-audio.addEventListener('ended', function () {       
-    audio.play();
-}, false);
-audio.play();
-
-
 /*estallido*/
-
 function play_esta() {
 	esta = document.getElementById("estallido");
 	esta.play();
 }
 /*estallido*/    
 </script>  
-<audio src="sound/estallido.mp3" id="estallido">
+<audio id="fondo" autoplay preload>
+	<source src="sound/musicafondoloop.mp3" type="audio/mp3"></source>
+    <source src="sound/musicafondoloop.ogg" type="audio/ogg"></source>
 </audio>
+
+<audio id="estallido" preload>
+	<source src="sound/estallido.mp3" type="audio/mp3"></source>
+    <source src="sound/estallido.ogg" type="audio/ogg"></source>
+</audio>
+
+
 
 </head>
 <body style="margin:0; height: 100%;">
