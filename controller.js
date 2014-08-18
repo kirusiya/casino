@@ -21,8 +21,22 @@ window.addEventListener('load', function(){
 controller.goToNextScene();
 }}]},{id: 4,name: 'sigue',dimensions: {height: 1280,width: 800,expanded: false,fit: false}, timelines: [{id: "1cUuQg",name: 'continua',animationCount: 5,duration: 1.493,lastKeyframeTime: 1.752},{id: "yI69rP",name: 'sale-continua',animationCount: 6,duration: 2.932,lastKeyframeTime: 2.932,endAction: function(controller) {
 controller.startSceneByID(5);
-}}]},{id: 5,name: 'juego',dimensions: {height: 1280,width: 800,expanded: false,fit: false}, timelines: [{id: "yI69rP",name: 'principio',animationCount: 32,duration: 0,lastKeyframeTime: 29.49,endAction: function(controller,event,symbolController) {
+}}]},{id: 5,name: 'juego',dimensions: {height: 1280,width: 800,expanded: false,fit: false}, timelines: [{id: "yI69rP",name: 'principio',animationCount: 31,duration: 0,lastKeyframeTime: 42.463,endAction: function(controller,event,symbolController) {
 
+
+},startAction: function(controller,event,symbolController) {
+/*controlar vida*/
+setTimeout(function(){
+	var vida_1 =quizData.contador;     
+    if(vida_1==0){
+		controller.goToTimelineByName('game-over');  
+    }   
+    
+}, 26000); 
+/**/
+
+var explo_1 = controller.getSymbolByInstanceId('N74OD3Mt');
+explo_1.goToTimelineByName('normal');
 
 },initAction: function(controller,event,symbolController) {
 //Enter your custom js code here; 
@@ -36,58 +50,21 @@ if (typeof(quizData) === "undefined") {
 
 quizData.contador = 0;
 
-
-
-}},{id: "vcllrh",name: 'level-2',animationCount: 40,duration: 29.182,lastKeyframeTime: 29.182,endAction: function(controller,event,symbolController) {
-
-
-},initAction: function(controller,event,symbolController) {
-/*aumentar el contador*/
-var theVariable =quizData.contador;
-
-try {
-    var elementId = controller.getElementIdById('score');
-    document.querySelector('#' + elementId + ' > span').innerText = '' + theVariable
-} catch (err) {
-    console.error(err);
-}
-/*aumentar el contador*/
+document.getElementById('moz-1').style.display="block";
+document.getElementById('cu-m1').style.display="block";
 
 
 
-
-}},{id: "goYNIW",name: 'level-3',animationCount: 40,duration: 19.505,lastKeyframeTime: 19.505,endAction: function(controller,event,symbolController) {
-
-
-},initAction: function(controller,event,symbolController) {
-/*aumentar el contador*/
-var theVariable =quizData.contador;
-
-try {
-    var elementId = controller.getElementIdById('score');
-    document.querySelector('#' + elementId + ' > span').innerText = '' + theVariable
-} catch (err) {
-    console.error(err);
-}
-/*aumentar el contador*/
-
-
-
-
-}},{id: "9WulbF",name: 'game-over',animationCount: 4,duration: 0,lastKeyframeTime: 1.755},{id: "wpTOhl",name: 'reglas',animationCount: 4,duration: 0,lastKeyframeTime: 1.755},{id: "aFoLHp",name: 'victoria',animationCount: 4,duration: 1.755,lastKeyframeTime: 1.755}]}],
+}},{id: "9WulbF",name: 'game-over',animationCount: 3,duration: 0,lastKeyframeTime: 1.755},{id: "wpTOhl",name: 'reglas',animationCount: 3,duration: 0,lastKeyframeTime: 1.755},{id: "aFoLHp",name: 'victoria',animationCount: 2,duration: 0,lastKeyframeTime: 1.755}]}],
         symbols: [{id: 'RnFEIU',name: 'mano',events: [],actions: {}, timelines: [{id: "FW3EeP",name: 'mano-2',animationCount: 0,duration: 0,lastKeyframeTime: 0},{id: "0",name: 'mano-1',animationCount: 1,duration: 0.248,lastKeyframeTime: 0.248,endAction: function(controller, event, symbolController) {
 symbolController.goToTimelineById('FW3EeP');
-}}]},{id: 'BmGZNd',name: 'boca',events: [],actions: {}, timelines: [{id: "0",name: 'normal',animationCount: 0,duration: 0,lastKeyframeTime: 0},{id: "gCCHYb",name: 'abajo',animationCount: 1,duration: 0.144,lastKeyframeTime: 0.144,endAction: function(controller, event, symbolController) {
+}}]},{id: 'BmGZNd',name: 'boca',events: [],actions: {}, timelines: [{id: "0",name: 'normal',animationCount: 0,duration: 0,lastKeyframeTime: 0},{id: "gCCHYb",name: 'abajo',animationCount: 1,duration: 0.252,lastKeyframeTime: 0.252,endAction: function(controller, event, symbolController) {
 symbolController.goToTimelineById('0');
-}}]},{id: 'mHWgaH',name: 'humo',events: [],actions: {}, timelines: [{id: "PHsMca",name: 'no-humo',animationCount: 0,duration: 0,lastKeyframeTime: 0},{id: "0",name: 'si-humo',animationCount: 1,duration: 0.37,lastKeyframeTime: 0.37}]},{id: 'dRckep',name: 'mozquito',events: [{id: "QLwfIN7T",type: ['click'],handler: function(controller,event,symbolController) {
-
-
-
-}}],actions: {init: function(controller, symbolController) {
+}}]},{id: 'mHWgaH',name: 'humo',events: [],actions: {}, timelines: [{id: "PHsMca",name: 'no-humo',animationCount: 0,duration: 0,lastKeyframeTime: 0},{id: "0",name: 'si-humo',animationCount: 1,duration: 0.37,lastKeyframeTime: 0.37}]},{id: 'dRckep',name: 'mozquito',events: [],actions: {init: function(controller, symbolController) {
 
 
 }
-}, timelines: [{id: "0",name: 'normal',animationCount: 2,duration: 0.119,lastKeyframeTime: 0.119,endAction: function(controller, event, symbolController) {
+}, timelines: [{id: "0",name: 'normal',animationCount: 0,duration: 0,lastKeyframeTime: 0,endAction: function(controller, event, symbolController) {
 symbolController.restartTimeline();
 },initAction: function(controller,event,symbolController) {
 //Enter your custom js code here; 
@@ -106,7 +83,7 @@ symbolController.restartTimeline();
 //create a global object/namespace for us to use
 
 
-}},{id: "uJePBb",name: 'cambio',animationCount: 4,duration: 0.133,lastKeyframeTime: 0.252}]}],
+}},{id: "uJePBb",name: 'cambio',animationCount: 2,duration: 0.133,lastKeyframeTime: 0.252}]}],
         projectActions: {},
         events: [{id: "an-obj-4",type: ['click'],handler: function(controller) {
 controller.startSceneByID(0,'1cUuQg');
@@ -155,9 +132,11 @@ var boca = controller.getSymbolByInstanceId('8jcOa9GJ');
 boca.goToTimelineByName('abajo');
 /*boca*/
 
+
+
 /*ocultar*/
-setTimeout(function(){
-	document.getElementById('moz-1').style.display="none";
+setTimeout(function(){	
+    document.getElementById('moz-1').style.display="none";
     document.getElementById('cu-m1').style.display="none";
 }, 200); 
 /*ocultar*/
@@ -639,7 +618,7 @@ explo_12.goToTimelineByName('cambio');
 
 
 }},{id: "jugar-nuevo",type: ['click'],handler: function(controller) {
-controller.startSceneByID(0);
+controller.startSceneByID(5,'yI69rP');
 }},{id: "moz-13",type: ['click'],handler: function(controller,event,symbolController) {
 /*aumentar el contador*/
 quizData.contador++;
@@ -807,25 +786,6 @@ explo_16.goToTimelineByName('cambio');
 
 
 
-
-}},{id: "an-obj-144",type: ['click'],handler: function(controller,event,symbolController) {
-var vida =quizData.contador;
-
-if(vida<=9){
-	controller.goToTimelineByName('game-over');
-}
-
-if(vida>9){
-	
-
-//Go to timeline by name
-//Parameters:
-//timeline_name - name of the timeline that should be loaded
-
-controller.goToTimelineByName('level-2');
-
-    
-}
 
 }},{id: "moz-17",type: ['click'],handler: function(controller,event,symbolController) {
 /*aumentar el contador*/
@@ -1330,26 +1290,6 @@ explo_28.goToTimelineByName('cambio');
 
 
 
-
-}},{id: "an-obj-221",type: ['click'],handler: function(controller,event,symbolController) {
-
-var vida =quizData.contador;
-
-if(vida<=25){
-	controller.goToTimelineByName('game-over');
-}
-
-if(vida>25){
-	
-
-//Go to timeline by name
-//Parameters:
-//timeline_name - name of the timeline that should be loaded
-
-controller.goToTimelineByName('level-3');
-
-    
-}
 
 }},{id: "moz-29",type: ['click'],handler: function(controller,event,symbolController) {
 /*aumentar el contador*/
@@ -2018,25 +1958,6 @@ explo_44.goToTimelineByName('cambio');
 
 
 
-
-}},{id: "an-obj-319",type: ['click'],handler: function(controller,event,symbolController) {
-var vida =quizData.contador;
-
-if(vida<=41){
-	controller.goToTimelineByName('game-over');
-}
-
-if(vida>41){
-	
-
-//Go to timeline by name
-//Parameters:
-//timeline_name - name of the timeline that should be loaded
-
-controller.goToTimelineByName('victoria');
-
-    
-}
 
 }}],
         externalResources: [{"url":"","type":"js"}]
