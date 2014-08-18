@@ -12,30 +12,8 @@
 <script type="text/javascript" src="controller.js"></script>
 
 <link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="phonegap.js"></script>
+
 <script type="text/javascript" src=""></script>
-<script>
-/*estallido*/
-function play_esta() {
-	esta = document.getElementById("estallido");
-	esta.play();
-}
-/*estallido*/    
-</script>  
-
-<video id="fondo" autoplay preload="metadata">
-	<source src="sound/musicafondoloop.mp4" type="audio/mp4"></source>
-    <source src="sound/musicafondoloop.mp3" type="audio/mp3"></source>
-    <source src="sound/musicafondoloop.ogg" type="audio/ogg"></source>
-</video >
-
-<video  id="estallido" preload>
-	<source src="sound/estallido.mp3" type="audio/mp3"></source>
-    <source src="sound/estallido.ogg" type="audio/ogg"></source>
-</video >
-
-
-
 </head>
 <body style="margin:0; height: 100%;">
 <div id="an-anim"><ol>
@@ -59,7 +37,7 @@ function play_esta() {
 </div>
 </li>
 
-<li id="an-scene-4" >
+<li id="sigue" >
 <div class="an-stage">
     <div id="an-obj-15"><div><img  height="1280" width="800"  src="assets/fondo-vaquero.jpg"></div></div>
     <div id="an-obj-16"><div><img  height="129" width="241"  src="assets/logo-casino.png"></div></div>
@@ -73,7 +51,7 @@ function play_esta() {
 </div>
 </li>
 
-<li id="an-scene-5" >
+<li id="juego" >
 <div class="an-stage">
     <div id="an-obj-24"><div><img  height="1280" width="800"  src="assets/fondo-vaquero.jpg"></div></div>
     <div id="an-obj-25"><div><img  height="129" width="241"  src="assets/logo-casino.png"></div></div>
@@ -82,42 +60,346 @@ function play_esta() {
     <div id="mano" class="an-symbol-XK0o0yqr an-symbol-container-RnFEIU an-symbol-container">
         <div id="an-obj-29" class="an-symbol-gKild0ZQ"><div><img  height="325" width="139"  src="assets/mano.png"></div></div>
     </div>
-    <div id="an-obj-30"><div><img  height="82" width="80"  src="assets/como.png"></div></div>
+    <div id="como-jugar-btn"><div><img  height="82" width="80"  src="assets/como.png"></div></div>
     <div id="an-obj-31"><div><img  height="22" width="66"  src="assets/score.png"></div></div>
     <div id="score"><span>0</span></div>
-    <div id="an-obj-33" class="an-symbol-8jcOa9GJ an-symbol-container-BmGZNd an-symbol-container">
+    <div id="boca-normal" class="an-symbol-8jcOa9GJ an-symbol-container-BmGZNd an-symbol-container">
         <div id="an-obj-34" class="an-symbol-RHYp97dA"><div><img  height="68" width="85"  src="assets/boca-normal.png"></div></div>
+        <div id="an-obj-35" class="an-symbol-9Z4f196c"><div><img  height="57" width="79"  src="assets/boca-abajo.png"></div></div>
     </div>
-    <div id="an-obj-35">
-        <div id="moz-1" class="an-symbol-N74OD3Mt an-symbol-container-dRckep an-symbol-container">
-            <div id="an-obj-37" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
-            <div id="an-obj-38" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
-            <div id="an-obj-39" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
-            <div id="an-obj-40" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
-        </div>
-        <div id="an-obj-41"></div>
-        <div id="moz-2" class="an-symbol-qoG5WA2x an-symbol-container-dRckep an-symbol-container">
-            <div id="an-obj-43" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
-            <div id="an-obj-44" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
-            <div id="an-obj-45" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
-            <div id="an-obj-46" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
-        </div>
-        <div id="an-obj-47"></div>
-        <div id="moz-3" class="an-symbol-5qf2FsZi an-symbol-container-dRckep an-symbol-container">
-            <div id="an-obj-49" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
-            <div id="an-obj-50" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
-            <div id="an-obj-51" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
-            <div id="an-obj-52" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
-        </div>
-        <div id="an-obj-53"></div>
-        <div id="moz-4" class="an-symbol-teG12Wjk an-symbol-container-dRckep an-symbol-container">
-            <div id="an-obj-55" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
-            <div id="an-obj-56" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
-            <div id="an-obj-57" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
-            <div id="an-obj-58" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
-        </div>
-        <div id="an-obj-59"></div>
+    <div id="humo-arriba" class="an-symbol-OCp2uDqQ an-symbol-container-mHWgaH an-symbol-container">
+        <div id="an-obj-37" class="an-symbol-VQjOxWRk"><div><img  height="147" width="296"  src="assets/humo-cigarro.png"></div></div>
     </div>
+    <div id="an-obj-38" class="an-symbol-tNWQp2bA an-symbol-container-mHWgaH an-symbol-container">
+        <div id="an-obj-39" class="an-symbol-VQjOxWRk"><div><img  height="147" width="296"  src="assets/humo-cigarro.png"></div></div>
+    </div>
+    <div id="humo-lat-1" class="an-symbol-8uwXqflK an-symbol-container-mHWgaH an-symbol-container">
+        <div id="an-obj-41" class="an-symbol-VQjOxWRk"><div><img  height="147" width="296"  src="assets/humo-cigarro.png"></div></div>
+    </div>
+    <div id="humo-lat-2" class="an-symbol-SOuvPCsO an-symbol-container-mHWgaH an-symbol-container">
+        <div id="an-obj-43" class="an-symbol-VQjOxWRk"><div><img  height="147" width="296"  src="assets/humo-cigarro.png"></div></div>
+    </div>
+    <div id="moz-1" class="an-symbol-N74OD3Mt an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-45" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-46" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-47" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-48" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m1"></div>
+    <div id="moz-2" class="an-symbol-qoG5WA2x an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-51" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-52" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-53" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-54" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m2"></div>
+    <div id="moz-3" class="an-symbol-5qf2FsZi an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-57" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-58" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-59" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-60" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m3"></div>
+    <div id="moz-4" class="an-symbol-teG12Wjk an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-63" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-64" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-65" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-66" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m4"></div>
+    <div id="moz-5" class="an-symbol-WRIRuOOF an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-69" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-70" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-71" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-72" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m5"></div>
+    <div id="moz-6" class="an-symbol-TTnXMnES an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-75" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-76" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-77" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-78" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m6"></div>
+    <div id="moz-7" class="an-symbol-81BBHPA4 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-81" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-82" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-83" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-84" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m7"></div>
+    <div id="moz-8" class="an-symbol-HfzMz4yE an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-87" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-88" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-89" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-90" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m8"></div>
+    <div id="moz-9" class="an-symbol-x3KpOyK3 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-93" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-94" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-95" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-96" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m9"></div>
+    <div id="moz-10" class="an-symbol-GIB1yFvX an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-99" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-100" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-101" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-102" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m10"></div>
+    <div id="moz-11" class="an-symbol-nWWPWo2T an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-105" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-106" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-107" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-108" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m11"></div>
+    <div id="moz-12" class="an-symbol-hrvBhKtG an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-111" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-112" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-113" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-114" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m12"></div>
+    <div id="an-obj-116"></div>
+    <div id="an-obj-117"><div><img  height="405" width="500"  src="assets/game-over1.png"></div></div>
+    <div id="jugar-nuevo"><div><img  height="56" width="171"  src="assets/jugar-nuevo.png"></div></div>
+    <div id="an-obj-119"><div><img  height="405" width="500"  src="assets/como-pergamino.png"></div></div>
+    <div id="moz-13" class="an-symbol-yYKJjvn6 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-121" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-122" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-123" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-124" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m13"></div>
+    <div id="moz-14" class="an-symbol-A3YpbEbN an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-127" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-128" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-129" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-130" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m14"></div>
+    <div id="moz-15" class="an-symbol-9mHFZXfK an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-133" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-134" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-135" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-136" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m15"></div>
+    <div id="moz-16" class="an-symbol-dp2s5kaX an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-139" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-140" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-141" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-142" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m16"></div>
+    <div id="an-obj-144"><div><img  height="405" width="500"  src="assets/continuar.png"></div></div>
+    <div id="an-obj-145"><div><img  height="191" width="350"  src="assets/level2.png"></div></div>
+    <div id="moz-17" class="an-symbol-3t118R1g an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-147" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-148" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-149" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-150" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m17"></div>
+    <div id="moz-18" class="an-symbol-b5vOMIqO an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-153" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-154" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-155" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-156" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m18"></div>
+    <div id="moz-19" class="an-symbol-GtWUAdcU an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-159" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-160" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-161" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-162" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m19"></div>
+    <div id="moz-20" class="an-symbol-UsAnI2O7 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-165" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-166" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-167" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-168" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m20"></div>
+    <div id="an-obj-170"><div><img  height="191" width="350"  src="assets/level1.png"></div></div>
+    <div id="moz-21" class="an-symbol-zyOnvOL1 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-172" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-173" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-174" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-175" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m21"></div>
+    <div id="moz-22" class="an-symbol-973Hy6r1 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-178" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-179" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-180" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-181" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m22"></div>
+    <div id="moz-23" class="an-symbol-G9ZMz68Q an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-184" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-185" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-186" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-187" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m23"></div>
+    <div id="moz-24" class="an-symbol-gXlaYByB an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-190" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-191" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-192" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-193" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m24"></div>
+    <div id="moz-25" class="an-symbol-7ZjbXGLf an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-196" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-197" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-198" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-199" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m25"></div>
+    <div id="moz-26" class="an-symbol-swla4Cgc an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-202" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-203" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-204" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-205" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m26"></div>
+    <div id="moz-27" class="an-symbol-yJnaBTMp an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-208" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-209" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-210" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-211" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m27"></div>
+    <div id="moz-28" class="an-symbol-bkPlqlft an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-214" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-215" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-216" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-217" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m28"></div>
+    <div id="an-obj-219"></div>
+    <div id="an-obj-220"><div><img  height="191" width="350"  src="assets/level3.png"></div></div>
+    <div id="an-obj-221"><div><img  height="405" width="500"  src="assets/continuar.png"></div></div>
+    <div id="moz-29" class="an-symbol-T7CcAE4k an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-223" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-224" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-225" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-226" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m29"></div>
+    <div id="moz-30" class="an-symbol-ZY6iSpwm an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-229" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-230" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-231" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-232" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m30"></div>
+    <div id="moz-31" class="an-symbol-zUt5EjBg an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-235" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-236" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-237" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-238" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m31"></div>
+    <div id="moz-32" class="an-symbol-iDZzjdNs an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-241" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-242" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-243" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-244" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m32"></div>
+    <div id="moz-33" class="an-symbol-sJXoGksS an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-247" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-248" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-249" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-250" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m33"></div>
+    <div id="moz-34" class="an-symbol-JR9D64Ov an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-253" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-254" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-255" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-256" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m34"></div>
+    <div id="moz-35" class="an-symbol-gSspNSLf an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-259" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-260" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-261" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-262" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m35"></div>
+    <div id="moz-36" class="an-symbol-vJaVduCu an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-265" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-266" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-267" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-268" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m36"></div>
+    <div id="moz-37" class="an-symbol-d2IM3v1f an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-271" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-272" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-273" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-274" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m37"></div>
+    <div id="moz-38" class="an-symbol-dydKwUPg an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-277" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-278" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-279" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-280" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m38"></div>
+    <div id="moz-39" class="an-symbol-fg73zaZm an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-283" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-284" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-285" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-286" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m39"></div>
+    <div id="moz-40" class="an-symbol-7yfzxtoE an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-289" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-290" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-291" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-292" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m40"></div>
+    <div id="moz-41" class="an-symbol-2zLGjftb an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-295" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-296" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-297" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-298" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m41"></div>
+    <div id="moz-42" class="an-symbol-I4Eds0QG an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-301" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-302" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-303" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-304" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m42"></div>
+    <div id="moz-43" class="an-symbol-f1oK16de an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-307" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-308" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-309" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-310" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m43"></div>
+    <div id="moz-44" class="an-symbol-qAfvxIq1 an-symbol-container-dRckep an-symbol-container">
+        <div id="an-obj-313" class="an-symbol-DYLYjN27"><div><img  height="175" width="220"  src="assets/humo.png"></div></div>
+        <div id="an-obj-314" class="an-symbol-NHsZXB3v"><div><img  height="30" width="31"  src="assets/ala-der.png"></div></div>
+        <div id="an-obj-315" class="an-symbol-Ajwulac7"><div><img  height="30" width="39"  src="assets/ala-izq.png"></div></div>
+        <div id="an-obj-316" class="an-symbol-QLwfIN7T"><div><img  height="58" width="91"  src="assets/cuerpo-moz.png"></div></div>
+    </div>
+    <div id="cu-m44"></div>
+    <div id="an-obj-318"></div>
+    <div id="an-obj-319"><div><img  height="405" width="500"  src="assets/continuar.png"></div></div>
+    <div id="an-obj-320"><div><img  height="191" width="350"  src="assets/ganaste.png"></div></div>
 </div>
 </li>
 
